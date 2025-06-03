@@ -138,10 +138,10 @@ chmod 1777 /tmp/sharedtest/
 mkdir -p /srv/logs/app1/
 chown :ops /srv/logs/app1/
 chmod 2770 /srv/logs/app1/
-setfacl -m g:devteam:r-x /srv/logs/app1/
+setfacl -m d:g:devteam:r-x /srv/logs/app1/
 setfacl -m d:u:alex:rwx /srv/logs/app1/
 
-# --- 5. Pakalpojumu konts ---
+# --- 5. Servisu konts ---
 useradd -r -s /usr/sbin/nologin nginx
 mkdir -p /var/www/html/
 chown -R nginx:nginx /var/www/html/
